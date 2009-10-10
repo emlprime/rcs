@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>RCS TEST ENV</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- 960 css -->
+    <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/text.css" />
+    <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/960.css" />
+    <link rel="icon" type="image/png" href="/site_media/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/site.css" />
+  </head>
+  <body>
+    <div class="container_12">
+      <div class="grid_12">
+	<div id="navigation" class="grid_6 prefix_3">
+	  <p><a href="/learn/">Learn</a><a href="/record/">Record</a><a href="/practice/">Practice</a><a href="/perform/">Perform</a></p>
+	</div>
+      </div>
+
+      <div id="clear">&nbsp;</div>
+
+      <div id="myspace_link" class="grid_3">
+	<p>myspace link</p>
+      </div>
+      <div class="grid_6" id="content">
+      {% block content %}
+      <p>this is the content area</p>
+      {% endblock %}
+      </div>
+      <div class="grid_3" id="class_schedule">
+	<p>class schedule</p>
+    </div>
+  </body>
+</html>

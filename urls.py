@@ -1,5 +1,7 @@
 from django.conf.urls.defaults import *
 
+from rcs.settings import MEDIA_ROOT
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
