@@ -1,3 +1,6 @@
 *~
 *.pyc
 db_data
+admin_media
+django
+apache
