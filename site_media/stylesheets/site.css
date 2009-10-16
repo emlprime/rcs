@@ -15,6 +15,11 @@ body
   margin-left: -100000px;
 }
 
+#masthead
+{
+  text-align: center;
+}
+
 #navigation
 {
   margin: 10px;
@@ -24,5 +29,5 @@ body
 
 #content
 {
-  outline: 1px solid red;
+  text-align: center;
 }
