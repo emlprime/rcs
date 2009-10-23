@@ -23,7 +23,7 @@ urlpatterns += patterns('django.views.generic.simple',
     (r'^$', 'direct_to_template', {'template':'index.html'}, "index"),
     (r'^learn/$', 'direct_to_template', {'template':'learn.html'}, "learn"),
     (r'^record/$', 'direct_to_template', {'template':'record.html'}, "record"),
-    (r'^practice/$', 'direct_to_template', {'template':'practice.html'}, "practice"),
+    (r'^rehearse/$', 'direct_to_template', {'template':'rehearse.html'}, "rehearse"),
     (r'^perform/$', 'direct_to_template', {'template':'perform.html'}, "perform"),
 
 )

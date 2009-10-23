@@ -27,7 +27,32 @@ body
   text-align: center;
 }
 
+h2
+{
+  font-size: 1.1em;
+  margin: 0.5em;
+}
+
+h3
+{
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0px;
+}
+
 #content
 {
   text-align: center;
+}
+
+.subheader
+{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+ul
+{
+  list-style-type: none;
+  text-align: left;
 }
