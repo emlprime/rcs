@@ -9,7 +9,7 @@ body
 {
   background-color: #000000;
   color: #ffffff;
-  font-family: courier,helvetica,arial,times;
+  font-family: courier new, courier,helvetica,arial,times;
 }
 
 a:link
@@ -54,7 +54,7 @@ a:hover
 h2
 {
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: normal;
   margin: 2em;
 }
 
