@@ -7,7 +7,28 @@
 
 body
 {
-  color: #000000;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+a:link
+{
+  color: #aabbff;
+}
+
+a:active
+{
+  color: #aabbff;
+}
+
+a:visited
+{
+  color: #aabbff;
+}
+
+a:hover
+{
+  color: #ffffff;
 }
 
 #header h1
