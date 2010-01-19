@@ -40,7 +40,7 @@ a:hover
 #masthead
 {
   text-align: center;
-  height: 120px;
+  height: 80px;
   margin-top: 2em;
 }
 
@@ -62,7 +62,7 @@ h3
 {
   font-size: 1.2em;
   font-weight: normal;
-  margin: 0px;
+  margin: 0.2em;
 }
 
 #content
@@ -81,6 +81,7 @@ h3
 .site_image
 {
   border: 1px solid white;
+  margin: 0em;
   margin-top: 2em;
 }
 
