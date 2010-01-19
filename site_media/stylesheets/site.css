@@ -7,28 +7,28 @@
 
 body
 {
-  background-color: #333333;
+  background-color: #000000;
   color: #ffffff;
 }
 
 a:link
 {
-  color: #aabbff;
+  color: #ffffff;
 }
 
 a:active
 {
-  color: #aabbff;
+  color: #ffffff;
 }
 
 a:visited
 {
-  color: #aabbff;
+  color: #ffffff;
 }
 
 a:hover
 {
-  color: #ffffff;
+  color: #ffff00;
 }
 
 #header h1
@@ -68,8 +68,10 @@ h3
 
 .subheader
 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
+  margin-top:0.5em;
+  margin-bottom: 0.2em;
 }
 
 ul

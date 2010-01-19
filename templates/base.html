@@ -13,9 +13,19 @@
   <body>
     <div class="container_12">
       <div class="grid_12">
-	<div id="masthead" class="grid_8 prefix_2">
+      <div id="myspace_link" class="grid_2 alpha">
+	<p>myspace link</p>
+      </div>	
+
+	<div id="masthead" class="grid_8">
 	  <a href="/"><h1>This is your logo</h1></a>
 	</div>
+      <div class="grid_2 omega" id="class_schedule">
+	<p>class schedule</p>
+    </div>
+
+      <div id="clear">&nbsp;</div>
+
 	<div id="navigation" class="grid_8 prefix_2">
 	  <div class="grid_2 alpha"><a href="/learn/">Learn</a></div>
 	   <div class="grid_2"><a href="/record/">Record</a></div>
@@ -26,16 +36,10 @@
 
       <div id="clear">&nbsp;</div>
 
-      <div id="myspace_link" class="grid_2">
-	<p>myspace link</p>
-      </div>
-      <div class="grid_8" id="content">
+      <div class="grid_12" id="content">
       {% block content %}
       <p>this is the content area</p>
       {% endblock %}
       </div>
-      <div class="grid_2" id="class_schedule">
-	<p>class schedule</p>
-    </div>
   </body>
 </html>
