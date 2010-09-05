@@ -44,7 +44,24 @@ a:hover
   margin-top: 2em;
 }
 
-#navigation
+#navigation_top
+{
+  margin: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#navigation_top span
+{
+  margin: 2em;
+}
+
+#navigation_bottom span
+{
+  margin: 1em;
+}
+
+#navigation_bottom
 {
   margin: 10px;
   font-size: 16px;
@@ -89,4 +106,30 @@ ul
 {
   list-style-type: none;
   text-align: left;
+}
+
+#myspace_link
+{
+  border: 1px solid white;
+}
+
+#myspace_link p
+{
+  margin: 1em;
+}
+
+#myspace_link:hover
+{
+  border: 1px solid yellow;
+}
+
+#calendar img
+{
+  width: 150px;
+  border: 2px solid white;
+}
+
+#calendar img:hover
+{
+  border: 2px solid yellow;
 }

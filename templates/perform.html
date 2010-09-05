@@ -4,18 +4,15 @@
 
 <div class="grid_6 alpha">
 
-<h3>CONCERTS</h3>
-<p>Our all-ages venue features live rock shows most Friday and Saturday nights.</p>
-<p>Shows feature 5 or 6 live bands, and usually run from 7:30 to 11:30pm.  Genres include Rock, Alternative, Punk, Hip Hop, Country and Metal.  Featuring touring bands from all over the country, our shows include many well known local supporting bands, and offer some new bands a place to be heard for the very first time. </p>
-<h3>THEATRE</h3>
-<p>We offer seasonal Theatrical productions on our stage.    A mix of professional, amateur and student performers combine for outstanding performances.  Our recent productions include the 1970s Rock Opera, "Tommy", "Chicago", "A 1940’s Review", and seasonal Halloween and Holiday shows.</p>
-<h3>RECITALS</h3>
-<p>Our students participate in a twice a year musical show highlighting  their accomplishments.  They perform as individuals and in groups.</p>
-<h3>PRIVATE PARTIES</h3>
-<p>Our venue is available for private concerts, CD release parties, birthday and graduation parties, showcases and dance parties.  Contact us with the details of your event for a quote.  Prices start at $400 for a 5 hour block of time.</p>
-<p>Our premium, surround sound PA system and backline of top-of-the-line equipment, offer a superb sound environment for audience and performers as well.  Our 120 person capacity provides for an intimate and exciting experience.</p>
-<p>Our stage can be easily configured for live recording of both audio and video, and many bands have created demo DVDs either during a live show or as a private live recording session.</p>
-<p>Complete theatrical lighting as well as DJ lighting and special effects make for an exciting and memorable event.</p>
+<ul>
+{% for object in perform_list %}
+
+<h3>{{ object.header }}</h3>
+
+<p>{{ object.text|escape|linebreaks }}</p>
+
+{% endfor %}
+</ul>
 </div>
 
 <div id="grid_6 omega">
