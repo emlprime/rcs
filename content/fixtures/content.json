@@ -1,0 +1,287 @@
+[
+    {
+        "pk": 1, 
+        "model": "content.hometext", 
+        "fields": {
+            "date": "2010-09-03", 
+            "text": "This is your home text.  It should greet visitors and present them with the most important facts about your business.  It should be one to two paragraphs."
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.contacttext", 
+        "fields": {
+            "date": "2010-09-05", 
+            "text": "This is your contact information.  Type in your phone number, address, hours of operation, and email."
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.videotext", 
+        "fields": {
+            "date": "2010-09-06", 
+            "text": "This is the text to introduce the video page"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.video", 
+        "fields": {
+            "date": "2010-09-06", 
+            "youtube_id": "f_3Utmj4RPU"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.learntext", 
+        "fields": {
+            "date": "2010-09-06", 
+            "top_text": "RCS provides expert instruction in every aspect of music.", 
+            "bottom_text": "Private lessons are $30 per half hour ($35 for vocal lessons).\r\n\r\nLessons in songwriting and recording engineering are available by special arrangement\r\n"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 1, 
+            "name": "Charlie Lin"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 1, 
+            "name": "Stephen Armstrong"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 1, 
+            "name": "Oscar Rivera"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 1, 
+            "name": "Carol Jones"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 6, 
+            "name": "Carol Jones"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 7, 
+            "name": "Carol Jones"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 8, 
+            "name": "Cavit Celayir-Monezis"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 3, 
+            "name": "Becca Cornelius"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 3, 
+            "name": "Julianne Cornelius"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 3, 
+            "name": "Scott Thomas"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 4, 
+            "name": "Justin Dempsey"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 4, 
+            "name": "Christopher Schnack"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 5, 
+            "name": "Heidi"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 5, 
+            "name": "David Applebaum"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 9, 
+            "name": "Doug Peyton"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "content.instructor", 
+        "fields": {
+            "instrument": 9, 
+            "name": "Trevor"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Guitar", 
+            "order": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Banjo", 
+            "order": 2
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Bass", 
+            "order": 3
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Mandolin", 
+            "order": 4
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Voice", 
+            "order": 5
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Drums", 
+            "order": 6
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Piano", 
+            "order": 7
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "content.instrument", 
+        "fields": {
+            "name": "Flute", 
+            "order": 8
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.recordtext", 
+        "fields": {
+            "date": "2010-09-06", 
+            "text": "This is where the record text will go"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.rehearsetext", 
+        "fields": {
+            "date": "2010-09-01", 
+            "text": "<h2>We offer 2 rehearsal spaces:</h2>\r\n\r\n<h3>The Studio:</h3>\r\n\r\nSoundproofed 15\u2019 x 22\u2019 space includes full DW drum kit, and tube amplifiers for guitars. Amps include Mesa Road King, Marshall TSL-100 half stack, Fender Concert Reverb and Blues Deluxe. Bass Amp is a solid state Gallien-Kruger. A professional PA is provided complete with Shure SM-58 mics.\r\n\r\nPrice $25 per hour (if you use your own cymbals). $30 per hour if you use the house (Sabian) cymbals.\r\n\r\n<h3>The Stage:</h3>\r\n\r\nA raised 13\u2019x 20\u2019 stage with full theatrical lighting. Complete DW drum kit and tube amplifiers for guitars. Amps include Mesa Triple Rectifier, Marshall DSL-100 Half stack, Fender Concert Reverbs. Professional house PA system with surround speakers and surround monitoring, complete with SM-58 mics.\r\n\r\nPrice $30 per hour (if you use your own cymbals). $35 per hour if you use the house (Sabian) cymbals.\r\n"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.performtext", 
+        "fields": {
+            "date": "2010-09-03", 
+            "text": "Our all-ages venue features live rock shows most Friday and Saturday nights.\r\n\r\nShows feature 5 or 6 live bands, and usually run from 7:30 to 11:30pm. Genres include Rock, Alternative, Punk, Hip Hop, Country and Metal. Featuring touring bands from all over the country, our shows include many well known local supporting bands, and offer some new bands a place to be heard for the very first time.", 
+            "header": "CONCERTS"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "content.performtext", 
+        "fields": {
+            "date": "2010-09-03", 
+            "text": "We offer seasonal Theatrical productions on our stage. A mix of professional, amateur and student performers combine for outstanding performances. Our recent productions include the 1970s Rock Opera, \"Tommy\", \"Chicago\", \"A 1940\u2019s Review\", and seasonal Halloween and Holiday shows.", 
+            "header": "THEATRE"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.performtext", 
+        "fields": {
+            "date": "2010-09-03", 
+            "text": "Our students participate in a twice a year musical show highlighting their accomplishments. They perform as individuals and in groups.", 
+            "header": "RECITALS"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "content.performtext", 
+        "fields": {
+            "date": "2010-09-03", 
+            "text": "Our venue is available for private concerts, CD release parties, birthday and graduation parties, showcases and dance parties. Contact us with the details of your event for a quote. Prices start at $400 for a 5 hour block of time.\r\n\r\nOur premium, surround sound PA system and backline of top-of-the-line equipment, offer a superb sound environment for audience and performers as well. Our 120 person capacity provides for an intimate and exciting experience.\r\n\r\nOur stage can be easily configured for live recording of both audio and video, and many bands have created demo DVDs either during a live show or as a private live recording session.\r\n\r\nComplete theatrical lighting as well as DJ lighting and special effects make for an exciting and memorable event.", 
+            "header": "PRIVATE PARTIES"
+        }
+    }
+]

@@ -1,8 +1,7 @@
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 
-from rcs.content.models import HomeText, PerformText, ContactText
-# LearnText, RecordText, RehearseText
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor, Instrument,  RehearseText, RecordText
 
 def home(request):
     """Submits the home page information to the URL
@@ -33,6 +32,7 @@ def rehearse(request):
     """
     template = "rehearse.html"
     rehearse_text = RehearseText.objects.latest()
+    print rehearse_text
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 
@@ -45,10 +45,11 @@ def record(request):
     return render_to_response(template, context, context_instance=RequestContext(request))
 
 def learn(request):
-    """Submits the record page information to the URL
+    """Submits the learn page information to the URL
     """
     template = "learn.html"
     learn_text = LearnText.objects.latest()
+    instruments = Instrument.objects.all()
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 
@@ -56,6 +57,8 @@ def videos(request):
     """Submits the videos page information to the URL
     """
     template = "videos.html"
+    video_text = VideoText.objects.latest()
+    videos = Video.objects.all()
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 

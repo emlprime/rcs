@@ -1,9 +1,17 @@
 {% extends "base.html" %}
-{% load filters %}
 
 {% block content %}
 
-VIDEO PAGE CONTENT
+<p>{{ video_text.text }}</p>
 
+{% for object in videos %}
+   <object width="425" height="344">
+    <param name="movie" value="http://www.youtube.com/watch/v/{{ object.youtube_id }}"></param>
+    <param name="allowFullScreen" value="true"></param>
+    <embed src="http://www.youtube.com/watch/v/{{ object.youtube_id }}" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed>
+    </object>
+
+
+{% endfor %}
 
 {% endblock %}

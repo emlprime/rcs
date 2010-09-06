@@ -18,17 +18,11 @@ urlpatterns = patterns('',
 
 )
 
-urlpatterns += patterns('django.views.generic.simple',
-    (r'^learn/$', 'direct_to_template', {'template':'learn.html'}, "learn"),
-    (r'^record/$', 'direct_to_template', {'template':'record.html'}, "record"),
-    (r'^rehearse/$', 'direct_to_template', {'template':'rehearse.html'}, "rehearse"),
-)
-
 urlpatterns += patterns('rcs.content.views',
      (r'^$', "home"),
-#     (r'^learn/$', "learn"),
-#     (r'^rehearse/$', "rehearse"),
-#     (r'^record/$', "record"),
+     (r'^learn/$', "learn"),
+     (r'^rehearse/$', "rehearse"),
+     (r'^record/$', "record"),
      (r'^perform/$', "perform"),
      (r'^contact/$', "contact"),
      (r'^videos/$', "videos"),
