@@ -10,45 +10,20 @@
 
 <div class="grid_6">
 
-<h3>Our Studio is double walled with 10 layers of soundproofing, 5 pane glass windows, and a sand filled floor.</h3>
-<h3>Studio is a modified semi-live room with great natural acoustics.</h3>
+<h3>{{ record_text.text|escape|linebreaks }}</h3>
 
-<h2>We offer a fully equipped digital recording studio featuring the following equipment:</h2>
-<ul class="grid_3 alpha">
-<li class="subheader">Board:</li>
-<li>Yamaha O2R96  - 56 channels.</li>
-<li class="subheader">Software:</li>
-<li>Digital Performer 5.0 running on a Mac Pro (quadcore).</li>
-<li>MOTU interfaces</li>
-<li>Big Ben Clock</li>
+  <ul>
+    {% for object in record_equipment %}
 
+    <div class="equipment">
+    <li class="subheader">{{ object.name }}</li>
+    {% for i in object.RecordEquipmentList %}
+    <li>{{ i.name }}</li>
+    {% endfor %}
+    </div>
 
-<li class="subheader">Condenser Microphones:</li>
-<li>Neumann U-87</li>
-<li>Neumann TLM-103   (3)</li>
-<li>Neumann KM-184   (2)</li>
-<li>AKG414   (matched pair)</li>
-<li>Shure KSM32</li>
-<li>Octava   (2)</li>
-</ul>
-
-<ul class="grid_3 omega">
-<li class="subheader">Dynamic Microphones</li>
-<li>Shure  SM-58  (5)</li>
-<li>Shure  SM-57  (9)</li>
-<li>Shure Beta 52 kick drum mic (2)</li>
-
-<li class="subheader">Guitar Amplifiers</li>
-<li>Mesa    Road King,   Triple Rectifier</li>
-<li>Marshall     TSL-100,  DSL-100</li>
-<li>Fender Concert Reverb  (3)</li>
-<li>Fender Blues Deluxe</li>
-<li>Fuchs ODS  100 watt</li>
-<li>Orange Tiny Terror (class A)</li>
-<li>Crate Palomino  (class A)</li>
-<li>Backline  (class A)</li>
-<li>Backline Solid State Bass AMP</li>
- </ul>
+    {% endfor %}
+  </ul>
 </div>
 
 <div class="grid_3 omega">

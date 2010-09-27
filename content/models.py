@@ -105,6 +105,28 @@ class RecordText(models.Model):
     def __unicode__(self):
         return str(self.date)
 
+class RecordEquipment(models.Model):
+    equipment_type = models.ForeignKey('RecordEquipmentType')
+    name = models.CharField(max_length=255)
+
+    def __unicode__(self):
+        return self.name
+
+class RecordEquipmentType(models.Model):
+    name = models.CharField(max_length=255)
+    order = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        ordering = ['order']
+
+    def RecordEquipmentList(self):
+        equipment_list=RecordEquipment.objects.filter(equipment_type=self)
+        return equipment_list
+
+
+    def __unicode__(self):
+        return self.name
+
 
 class RehearseText(models.Model):
     # the logic for the admin-editable rehearse page text

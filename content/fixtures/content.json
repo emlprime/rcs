@@ -237,7 +237,223 @@
         "model": "content.recordtext", 
         "fields": {
             "date": "2010-09-06", 
-            "text": "This is where the record text will go"
+            "text": "Our Studio is double walled with 10 layers of soundproofing, 5 pane glass windows, and a sand filled floor.\r\nStudio is a modified semi-live room with great natural acoustics.\r\n\r\nWe offer a fully equipped digital recording studio featuring the following equipment:"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 1, 
+            "name": "Yamaha O2R96 - 56 channels."
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 2, 
+            "name": "Digital Performer 5.0 running on a Mac Pro (quadcore)."
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 2, 
+            "name": "MOTU interfaces"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 2, 
+            "name": "Big Ben Clock"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "Neumann U-87"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "Neumann TLM-103 (3)"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "Neumann KM-184 (2)"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "AKG414 (matched pair)"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "Shure KSM32"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 3, 
+            "name": "Octava (2)"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 4, 
+            "name": "Shure SM-58 (5)"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 4, 
+            "name": "Shure SM-57 (9)"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 4, 
+            "name": "Shure Beta 52 kick drum mic (2)"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Mesa Road King, Triple Rectifier"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Marshall TSL-100, DSL-100"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Fender Concert Reverb (3)"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Fender Blues Deluxe"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Fuchs ODS 100 watt"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Orange Tiny Terror (class A)"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Crate Palomino (class A)"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Backline (class A)"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "content.recordequipment", 
+        "fields": {
+            "equipment_type": 5, 
+            "name": "Backline Solid State Bass AMP"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "content.recordequipmenttype", 
+        "fields": {
+            "name": "Guitar Amplifiers", 
+            "order": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.recordequipmenttype", 
+        "fields": {
+            "name": "Board", 
+            "order": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "content.recordequipmenttype", 
+        "fields": {
+            "name": "Software", 
+            "order": 3
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.recordequipmenttype", 
+        "fields": {
+            "name": "Condenser Microphones", 
+            "order": 4
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "content.recordequipmenttype", 
+        "fields": {
+            "name": "Dynamic Microphones", 
+            "order": 5
         }
     }, 
     {

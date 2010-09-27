@@ -1,7 +1,7 @@
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 
-from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor, Instrument,  RehearseText, RecordText
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor, Instrument,  RehearseText, RecordText, RecordEquipment, RecordEquipmentType
 
 def home(request):
     """Submits the home page information to the URL
@@ -41,6 +41,7 @@ def record(request):
     """
     template = "record.html"
     record_text = RecordText.objects.latest()
+    record_equipment = RecordEquipmentType.objects.all()
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 

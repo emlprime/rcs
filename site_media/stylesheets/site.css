@@ -108,7 +108,7 @@ ul
   text-align: left;
 }
 
-.instrument
+.instrument, .equipment
 {
   width: 200px;
   float: left;
