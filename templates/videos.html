@@ -5,13 +5,12 @@
 <p>{{ video_text.text }}</p>
 
 {% for object in videos %}
-   <object width="425" height="344">
-    <param name="movie" value="http://www.youtube.com/watch/v/{{ object.youtube_id }}"></param>
-    <param name="allowFullScreen" value="true"></param>
-    <embed src="http://www.youtube.com/watch/v/{{ object.youtube_id }}" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed>
-    </object>
-
-
+<object width="480" height="385">
+<param name="movie" value="http://www.youtube.com/v/{{ object.youtube_id }}?fs=1&amp;hl=en_US"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="allowscriptaccess" value="always"></param>
+<embed src="http://www.youtube.com/v/{{ object.youtube_id }}?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed>
+</object>
 {% endfor %}
 
 {% endblock %}
