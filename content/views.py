@@ -32,7 +32,6 @@ def rehearse(request):
     """
     template = "rehearse.html"
     rehearse_text = RehearseText.objects.latest()
-    print rehearse_text
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 
