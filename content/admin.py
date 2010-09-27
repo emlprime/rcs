@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, Instructor, Instrument, LearnText, RehearseText, RecordText
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, Instructor, Instrument, LearnText, RehearseText, RecordText, RecordEquipment, RecordEquipmentType
 
 class HomeTextAdmin(admin.ModelAdmin):
     pass
@@ -30,11 +30,17 @@ class LearnTextAdmin(admin.ModelAdmin):
     pass
 admin.site.register(LearnText, LearnTextAdmin)
 
-
 class RecordTextAdmin(admin.ModelAdmin):
     pass
 admin.site.register(RecordText, RecordTextAdmin)
 
+class RecordEquipmentAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(RecordEquipment, RecordEquipmentAdmin)
+
+class RecordEquipmentTypeAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(RecordEquipmentType, RecordEquipmentTypeAdmin)
 
 class RehearseTextAdmin(admin.ModelAdmin):
     pass
