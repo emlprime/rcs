@@ -1,8 +1,35 @@
 {% extends "base.html" %}
+{% load filters %}
 
 {% block content %}
 
-CALENDAR PAGE CONTENT
+This is the calendar:
+<div id="first_calendar">
+{{ calendar_html|safe }}
+</div>
+
+
+{% comment %}
+{% get_calendar for 10 2010 as calendar %}
+<table>
+    <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>        
+    </tr>
+    {% for week in calendar %}
+    <tr>
+        {% for day in week %}
+        <td>{{ day.day }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endcomment %}
 
 
 {% endblock %}

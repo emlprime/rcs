@@ -78,6 +78,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.admin',
     'rcs.content',
+    'rcs.django_calendar',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',

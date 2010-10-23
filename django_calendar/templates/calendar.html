@@ -1,0 +1,42 @@
+<div id="django_calendar">
+<table id="calendar" cellpadding="0" cellspacing="0" title="Drag and drop for multiple dates">
+<tr>
+  <th colspan="7" id="date_search">
+      <a class="dxhr" href="{{self.year_previous}}" title="Year Down"> << </a>
+      <a class="dxhr" href="{{self.month_previous}}" title="Month Down"> < </a>
+      {{self.today|date:"F y"}}
+      <a class="dxhr" id="next-m" href="{{self.month_next}}" title="Month Up"> > </a>
+      <a class="dxhr" id="next-y" href="{{self.year_next}}" title="Year Up"> >> </a>
+  </th>
+</tr>
+<tr>
+  <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+</tr>
+{% for w in self.weeks %}
+	{% if forloop.first %}
+    <tr>
+    {% for day in w %}
+        <td{% ifequal day 1 %} id="firstday"{% endifequal %} class="{% ifequal day current_day %}on{% else %}off{% endifequal %}">{% ifnotequal day|stringformat:"s" '0' %}<a href="/calendar/{{current_year}}/{{current_month}}/{{day}}">{{day}}</a>{% endifnotequal %}
+		</td>
+    {% endfor %}
+    </tr>
+	{% else %}
+	{% if forloop.last %}
+    <tr>
+    {% for day in w %}
+        <td{% ifequal day last %} id="lastday"{% endifequal %} class="{% ifequal day current_day %}on{% else %}off{% endifequal %}">{% ifnotequal day|stringformat:"s" '0' %}<a href="/calendar/{{current_year}}/{{current_month}}/{{day}}">{{day}}</a>{% endifnotequal %}
+		</td>
+    {% endfor %}
+    </tr>
+	{% else %}
+    <tr>
+    {% for day in w %}
+        <td class="{% ifequal day current_day %}on{% else %}off{% endifequal %}">{% ifnotequal day|stringformat:"s" '0' %}<a href="/calendar/{{current_year}}/{{current_month}}/{{day}}">{{day}}</a>{% endifnotequal %}
+		</td>
+    {% endfor %}
+    </tr>
+	{% endif %}{% endif %}
+{% endfor %}
+</table>
+<div id="django_calendar_response"></div>
+</div>

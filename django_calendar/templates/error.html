@@ -1,0 +1,20 @@
+{% extends "chassis.html" %}
+{% block content %}
+
+{% if code %}
+There has been an error.
+<br />
+<br />
+{{code}}, {{custom_message}}
+{% else %}
+There has been an unanticpitated error, 419.
+<br />
+
+{% endif %}
+<br />
+<br />
+{% if alert %}
+Please email <a href="mailto:{{alert}}" title="Site Administrator">{{alert}}</a> if this error persists
+{% endif %}
+
+{% endblock %}

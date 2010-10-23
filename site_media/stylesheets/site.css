@@ -40,7 +40,7 @@ a:hover
 #masthead
 {
   text-align: center;
-  height: 80px;
+  height: 280px;
   margin-top: 2em;
 }
 
@@ -112,22 +112,6 @@ ul
 {
   width: 200px;
   float: left;
-}
-
-
-#myspace_link
-{
-  border: 1px solid white;
-}
-
-#myspace_link p
-{
-  margin: 1em;
-}
-
-#myspace_link:hover
-{
-  border: 1px solid yellow;
 }
 
 #calendar img
