@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  {% load calendar_tags %}
   <head>
     <title>Rock City Studios | Learn, Record, Rehearse, Perform</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -9,41 +10,54 @@
     <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/960.css" />
     <link rel="icon" type="image/ico" href="/site_media/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/site.css" />
+  <script type="text/javascript" src="/site_media/scripts/jquery-1.2.3.min.js"></script>
+  {% calendar_media %}
+  <script type="text/javascript" src="/site_media/scripts/base.js"></script>
   </head>
+  {% block extrahead %}
+  <script type="text/javascript">
+    var do_with_ajax = false
+  </script>
+  {% endblock%}
+
   <body>
+
     <div class="container_12">
-      <div class="grid_12">
-      <div id="myspace_link" class="grid_2 alpha">
-	<a href="http://www.myspace.com/rockcitystudio" target="_BLANK"><p>for more information about bands, shows, and more, click here to visit our myspace page</p></a>
-      </div>	
-      <div class="grid_8 alpha omega">
-	<div id="masthead">
-	  <a href="/"><h1>This is your logo</h1></a>
-	</div>
 
-
-	<div id="navigation_top">
-	  <span><a href="/">Home</a></span>
-	   <span><a href="/contact/">Contact</a></span>
-	   <span><a href="/videos/">Videos</a></span>
-	   <span><a href="/calendar/">Calendar</a></span>
-	</div>
-
-	<div id="navigation_bottom">
-	  <span><a href="/learn/">Learn</a></span>
-	   <span><a href="/record/">Record</a></span>
-	   <span><a href="/rehearse/">Rehearse</a></span>
-	   <span><a href="/perform/">Perform</a></span>
-	</div>
+      <div class="grid_12" id="masthead">
+	<a href="/"><img src="/site_media/images/TOPBANNER.jpg" alt="Rock City Studios" /></a>
       </div>
+
+      <div class="clear">&nbsp;</div>
+
+      <div class="grid_12">
+
+	<div id="myspace_link" class="grid_2">
+	  <a href="http://www.myspace.com/rockcitystudio" target="_BLANK"><img src="/site_media/images/myspace_button.png" alt="for more information about bands, shows, and more, click here to visit our myspace page" /></a>
+	</div>	
+
+	<div class="grid_8 alpha omega">
+
+	  <div id="navigation_top">
+	    <span><a href="/">Home</a></span>
+	    <span><a href="/contact/">Contact</a></span>
+	    <span><a href="/videos/">Videos</a></span>
+	    <span><a href="/calendar/">Calendar</a></span>
+	  </div>
+
+	  <div id="navigation_bottom">
+	    <span><a href="/learn/">Learn</a></span>
+	    <span><a href="/record/">Record</a></span>
+	    <span><a href="/rehearse/">Rehearse</a></span>
+	    <span><a href="/perform/">Perform</a></span>
+	  </div>
+	</div>
+
       <div class="grid_2 omega" id="calendar">
 	<p><a href="/calendar/"><img src="/site_media/images/calendar.jpg" alt="click here to view our calendar of uncoming events" /></a></p>
-    </div>
-
-      <div id="clear">&nbsp;</div>
-
       </div>
 
+      </div>
       <div id="clear">&nbsp;</div>
 
       <div class="grid_12" id="content">

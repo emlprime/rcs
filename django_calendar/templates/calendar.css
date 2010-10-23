@@ -1,0 +1,111 @@
+#django_calendar 
+{
+ display:block;
+ float:left;
+ position:relative;
+ z-index:10;
+ background:transparent;
+}
+
+/* important not to let user select table content directly */
+#django_calendar table
+{
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+#django_calendar_sample_output
+{
+  padding:0 0 0 30px;
+  width:200px;
+  float:right;
+  font-size:20px;
+  display:block;
+  text-align:right;
+  color:grey;
+  }
+
+#django_calendar_response
+{
+  padding:0 50px 0 50px;
+  width:160px;
+  float:left;
+  font-size:20px;
+  display:block;
+  text-align:right;
+  color:grey;
+}
+
+
+
+#django_calendar table#calendar
+{
+    display:block;
+    float:left;
+    position:relative;
+    width:197px;
+    border:none;
+    background:#000;
+    margin:0 auto;
+    color:white;
+    text-align:center;
+    border-bottom:1px solid yellow;  
+    border-right:1px solid yellow;  
+}
+
+#django_calendar table#calendar th#date_search
+{
+    font-size:14px;
+    color:white;
+    font-weight:bold;
+    width:190px;
+    height:35px;
+    text-align:center;
+    padding-top:0px;
+    border:none;
+}
+
+#django_calendar table#calendar th#date_search a
+{
+  color:orange;
+  font-weight:bold;
+  font-size:120%;
+}
+
+#django_calendar table#calendar td
+{
+    border-top:1px solid #17a1ca;
+    border-left:1px solid #17a1ca;
+    width:26px;
+    height:22px;
+    padding:0;
+    cursor:pointer;
+}
+
+#django_calendar table#calendar tr td
+{
+    font-size:16px;
+    color:#aee9f7;
+    font-weight:bold;
+}
+
+#django_calendar table#calendar tr td a:hover,
+#django_calendar table#calendar tr td a.on
+{
+    background:orange;
+    color:white;
+    filter:alpha(opacity=100); 
+    -moz-opacity:1;          
+    opacity:1;   
+}
+
+#django_calendar table#calendar td a {
+      display:block;
+      width:27px;
+      height:28px;
+      text-decoration:none;
+      color:white;
+}
+
+
