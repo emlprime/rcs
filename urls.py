@@ -10,7 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^site_media/(.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
     (r'^admin/(.*)$', admin.site.root),
-    (r'^calendar/', include('django_calendar.urls'))
+    (r'^calendar/', include('rcs.event.urls'))
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
@@ -26,5 +26,4 @@ urlpatterns += patterns('rcs.content.views',
      (r'^perform/$', "perform"),
      (r'^contact/$', "contact"),
      (r'^videos/$', "videos"),
-     (r'^my_calendar/$', "calendar"),
 )
