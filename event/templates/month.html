@@ -1,5 +1,35 @@
 {% extends "base.html" %}
 
 
+{% block content %}
 
+<table class="calendar" width="800" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    {% for day in weekdays %}
+    <th>{{ day }}</th>
+    {% endfor %}
+  </tr>
+{% for week in weeks %}
+<tr>
+  {% for day in week %}
+  {% if day %}
+  <td>
+    <div class="day">
+      <span>{{ day.0 }}</span>
+    </div>
+    <div class="events">
+      events
+    </div>
+  </td>
+  {% else %}
+  <td class="empty">
+    <div class="day"> &nbsp; </div>
+    <div class="events"> &nbsp; </div>
+  </td>
+  {% endif %}
+  {% endfor %}
+</tr>
+{% endfor %}
+</table>
 
+{% endblock %}

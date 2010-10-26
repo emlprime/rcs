@@ -107,3 +107,36 @@ ul
 {
   border: 2px solid yellow;
 }
+
+
+.calendar td div.day {
+  height: 1em;
+  padding-bottom: 8px;
+  margin-bottom: 0px;
+  background-color: #ccc;
+  color: #999;
+  font-size: 1em;
+  text-align: left;
+}
+
+.calendar td.empty div {
+  background-color: black;
+}
+
+.calendar td div.day span {
+  margin-left: 0.5em;
+}
+
+.calendar td div.events {
+  height: 6em;
+}
+ 
+.calendar td div {
+  padding: 2px;
+  float: left;
+  clear: both;
+  width: 8em;
+}
+.calendar td {
+  border: 1px solid #FFF;
+}
