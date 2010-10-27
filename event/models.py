@@ -50,4 +50,28 @@ class Event(models.Model):
         
         return weeks
 
+    @classmethod
+    def fill_events(cls, weeks, date_str=None):
+        date = datetime.strptime(date_str, "%Y-%m-%d")
+        calendar = [[]]
+        for week in weeks:
+            for events_for_day in week:
+                if not events_for_day:
+                    calendar[-1].append(None)
+                    continue
+                day = events_for_day[0]
+                date = datetime(date.year, date.month, day)
+                
+                current_date_str = "%02d-%02d-%02d" % (date.year, date.month, day)
 
+                events = Event.get_events_for_day(current_date_str)
+                if date.weekday() == 0 and len(calendar) > 0:
+                    calendar.append([])
+                calendar[-1].append((day, events))
+
+        return calendar
+        
+
+    def __unicode__(self):
+        return self.summary
+        
