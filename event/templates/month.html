@@ -9,7 +9,7 @@
     <th>{{ day }}</th>
     {% endfor %}
   </tr>
-{% for week in weeks %}
+{% for week in calendar %}
 <tr>
   {% for day in week %}
   {% if day %}
@@ -18,8 +18,11 @@
       <span>{{ day.0 }}</span>
     </div>
     <div class="events">
-      events
+      {% for event in day.1 %}
+      {{ event.display|safe }}
+      {% endfor %}
     </div>
+    <div class="clear">&nbsp;</div>
   </td>
   {% else %}
   <td class="empty">

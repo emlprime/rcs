@@ -1,7 +1,8 @@
 from django.conf.urls.defaults import *
 
-from event.views import current_month
+from event.views import month_calendar
 
 urlpatterns = patterns('event.views',
-    url(r'^$', 'current_month'),
+    url(r'^$', 'month_calendar'),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', 'month_calendar'),
 )

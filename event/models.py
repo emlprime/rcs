@@ -6,12 +6,12 @@ class Event(models.Model):
     """
 
     summary = models.CharField(max_length=255)
-    location = models.CharField(max_length=255)
-    description = models.TextField()
-    date_start = models.DateTimeField()
-    date_end = models.DateTimeField()
-    created = models.DateTimeField()
-    url = models.URLField()
+    location = models.CharField(max_length=255, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    date_start = models.DateField()
+    date_end = models.DateField(null=True, blank=True)
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
     
     @classmethod
     def get_events_for_day(cls, date=None):
@@ -36,11 +36,11 @@ class Event(models.Model):
         date = datetime.strptime(date_str, "%Y-%m-%d")
         weeks = [[]]
         # pad the front of the calendar
-        [weeks[-1].append(None) for i in range(date.weekday()-1)]
+        [weeks[-1].append(None) for i in range(date.weekday() + 1)]
 
         for day in cls.get_days_of_month(date_str):
             date = datetime(date.year, date.month, day)
-            if date.weekday() == 0 and len(weeks) > 0:
+            if date.weekday() == 6 and len(weeks) > 0:
                 weeks.append([])
             events = []
             weeks[-1].append((day, events))
@@ -65,13 +65,19 @@ class Event(models.Model):
                 current_date_str = "%02d-%02d-%02d" % (date.year, date.month, day)
 
                 events = Event.get_events_for_day(current_date_str)
-                if date.weekday() == 0 and len(calendar) > 0:
+                if date.weekday() == 6 and len(calendar) > 0:
                     calendar.append([])
                 calendar[-1].append((day, events))
 
         return calendar
-        
+
+    def display(self):
+        result = "<a href='%s'>%s</a>" % (self.url, self.summary)
+        return result
 
     def __unicode__(self):
+        return self.summary
+        
+    def __str__(self):
         return self.summary
         

@@ -128,7 +128,7 @@ ul
 }
 
 .calendar td div.events {
-  height: 6em;
+  min-height: 11em;
 }
  
 .calendar td div {

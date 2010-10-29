@@ -2,7 +2,6 @@ from django.conf.urls.defaults import *
 
 from rcs.settings import MEDIA_ROOT
 
-
 from django.contrib import admin
 
 admin.autodiscover()
