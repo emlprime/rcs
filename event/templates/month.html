@@ -3,6 +3,24 @@
 
 {% block content %}
 
+<ul class="navigation">
+  <li class="previous">
+    &nbsp;
+    {% if previous_month_url %}
+    <a href="{{ previous_month_url }}">&lt; &lt; Previous</a>
+    {% endif %}
+  </li>
+  <li class="select">
+    {{ current_month }}
+  </li>
+  <li class="next">
+    {% if next_month_url %}
+    <a href="{{ next_month_url }}">Next &gt;&gt;</a>
+    {% endif %}
+    &nbsp;
+  </li>
+</ul>
+
 <table class="calendar" width="800" cellspacing="0" cellpadding="0" border="0">
   <tr>
     {% for day in weekdays %}

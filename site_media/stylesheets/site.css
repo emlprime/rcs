@@ -108,6 +108,10 @@ ul
   border: 2px solid yellow;
 }
 
+.calendar {
+    margin: auto;
+    outline: 1px dashed white;
+}
 
 .calendar td div.day {
   height: 1em;
@@ -139,4 +143,26 @@ ul
 }
 .calendar td {
   border: 1px solid #FFF;
+}
+
+.navigation {
+  margin: auto;
+  width: 600px;
+  outline: 1px dashed red;
+}
+
+.navigation li {
+  float: left;
+  width: 200px;
+  padding: 0px;
+  margin: 0px;
+  outline: 1px dashed blue;
+}
+
+.navigation li.select {
+  text-align: center;
+}
+
+.navigation li.next {
+  text-align: right;
 }

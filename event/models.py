@@ -1,5 +1,8 @@
 from django.db import models
-from datetime import datetime
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+
+DATE_FORMAT = "%Y-%m-%d"
 
 class Event(models.Model):
     """ Event class for a calendar
@@ -20,7 +23,7 @@ class Event(models.Model):
 
     @classmethod
     def get_days_of_month(cls, date_str=None):
-        date = datetime.strptime(date_str, "%Y-%m-%d")
+        date = datetime.strptime(date_str, DATE_FORMAT)
         
         # 30 days hath september, april, june and november
         # all the rest have 31
@@ -33,10 +36,11 @@ class Event(models.Model):
 
     @classmethod
     def get_weeks_for_month(cls, date_str=None):
-        date = datetime.strptime(date_str, "%Y-%m-%d")
+        date = datetime.strptime(date_str, DATE_FORMAT)
         weeks = [[]]
         # pad the front of the calendar
-        [weeks[-1].append(None) for i in range(date.weekday() + 1)]
+        if date.weekday() != 6:
+            [weeks[-1].append(None) for i in range(date.weekday() + 1)]
 
         for day in cls.get_days_of_month(date_str):
             date = datetime(date.year, date.month, day)
@@ -46,13 +50,13 @@ class Event(models.Model):
             weeks[-1].append((day, events))
             
         # pad the end of the calendar
-        [weeks[-1].append(None) for i in range(6-date.weekday())]
+        [weeks[-1].append(None) for i in range(5-date.weekday())]
         
         return weeks
 
     @classmethod
     def fill_events(cls, weeks, date_str=None):
-        date = datetime.strptime(date_str, "%Y-%m-%d")
+        date = datetime.strptime(date_str, DATE_FORMAT)
         calendar = [[]]
         for week in weeks:
             for events_for_day in week:
@@ -71,9 +75,36 @@ class Event(models.Model):
 
         return calendar
 
+    @classmethod
+    def get_previous_month(cls, date_str):
+        current_date = datetime.strptime(date_str, DATE_FORMAT)
+        next_month = current_date + relativedelta(months=-1, day=1)
+        return next_month
+
+    @classmethod
+    def get_next_month(cls, date_str):
+        current_date = datetime.strptime(date_str, DATE_FORMAT)
+        next_month = current_date + relativedelta(months=+1, day=1)
+        return next_month
+
+    @classmethod
+    def next_month_url(cls, date_str):
+        next_month = Event.get_next_month(date_str)
+        year = next_month.year
+        month = next_month.month
+        return "/calendar/%d/%02d/" % (year, month)
+
+    @classmethod
+    def previous_month_url(cls, date_str):
+        previous_month = Event.get_previous_month(date_str)
+        year = previous_month.year
+        month = previous_month.month
+        return "/calendar/%d/%02d/" % (year, month)
+
     def display(self):
         result = "<a href='%s'>%s</a>" % (self.url, self.summary)
         return result
+
 
     def __unicode__(self):
         return self.summary
