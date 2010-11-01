@@ -50,7 +50,11 @@ class Event(models.Model):
             weeks[-1].append((day, events))
             
         # pad the end of the calendar
-        [weeks[-1].append(None) for i in range(5-date.weekday())]
+        last_week_length = len(weeks[-1])
+        total_week_length = 7
+        days_to_pad = total_week_length - last_week_length
+        [weeks[-1].append(None) for i in range(days_to_pad)]
+        #raise "Error"
         
         return weeks
 
@@ -72,6 +76,7 @@ class Event(models.Model):
                 if date.weekday() == 6 and len(calendar) > 0:
                     calendar.append([])
                 calendar[-1].append((day, events))
+                
 
         return calendar
 
@@ -101,10 +106,18 @@ class Event(models.Model):
         month = previous_month.month
         return "/calendar/%d/%02d/" % (year, month)
 
+    @classmethod
+    def get_events_from_calendar(cls, calendar):
+        # return a list of events for a calendar
+        return [day[1][0] for week in calendar for day in week if day and len(day[1]) > 0]
+
+
     def display(self):
-        result = "<a href='%s'>%s</a>" % (self.url, self.summary)
+        result = "<a href='%s' class='event_link' title=\"%s\">%s</a>" % (self.url, self.display_tooltip(), self.summary)
         return result
 
+    def display_tooltip(self):
+        return "<title>%s</title><p>%s</p>" % (self.summary, self.description)
 
     def __unicode__(self):
         return self.summary

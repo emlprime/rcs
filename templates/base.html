@@ -10,16 +10,14 @@
     <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/960.css" />
     <link rel="icon" type="image/ico" href="/site_media/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/site_media/stylesheets/site.css" />
-  <script type="text/javascript" src="/site_media/scripts/jquery-1.2.3.min.js"></script>
-  {# calendar_media #}
-  <script type="text/javascript" src="/site_media/scripts/base.js"></script>
-  </head>
-  {% block extrahead %}
-  <script type="text/javascript">
-    var do_with_ajax = false
-  </script>
-  {% endblock%}
+    <script type="text/javascript" src="/site_media/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/site_media/scripts/jquery.qtip-1.0.0-rc3.min.js"></script>
+    <script type="text/javascript" src="/site_media/scripts/base.js"></script>
+    {% block extrahead %}
+    {% endblock%}
+    {% block qtipjs %} {% endblock %}
 
+  </head>
   <body>
 
     <div class="container_12">
@@ -41,18 +39,20 @@
 	  <span><a href="/rehearse/"><img src="/site_media/images/REHEARSE.jpg" alt="Rehearse" /></a></span>
 	  <span><a href="/record/"><img src="/site_media/images/RECORD.jpg" alt="Record" /></a></span>
 	  <span><a href="/perform/"><img src="/site_media/images/PERFORM.jpg" alt="Perform" /></a></span>
-	  <span><a href="http://www.myspace.com/rockcitystudio" target="_BLANK"><img src="/site_media/images/MYSPACE.jpg" alt="for more information about bands, shows, and more, click here to visit our myspace page" /></a></span>
-	  <span><a href="http://www.facebook.com/pages/Camarillo-CA/Rock-City-Studios/104447707207" target="_BLANK"><img src="/site_media/images/FACEBOOK.jpg" alt="Facebook" /></a></span>
-	  <span><a href="http://www.youtube.com/user/RockCityStudiosCA" target="_BLANK"><img src="/site_media/images/YOUTUBE.jpg" alt="YouTube" /></a></span>
+	  <span><a href="http://www.myspace.com/rockcitystudio" rel="external"><img src="/site_media/images/MYSPACE.jpg" alt="for more information about bands, shows, and more, click here to visit our myspace page" /></a></span>
+	  <span><a href="http://www.facebook.com/pages/Camarillo-CA/Rock-City-Studios/104447707207" rel="external"><img src="/site_media/images/FACEBOOK.jpg" alt="Facebook" /></a></span>
+	  <span><a href="http://www.youtube.com/user/RockCityStudiosCA" rel="external"><img src="/site_media/images/YOUTUBE.jpg" alt="YouTube" /></a></span>
 
 	</div>
 
-      <div id="clear">&nbsp;</div>
+	<div id="clear">&nbsp;</div>
 
-      <div class="grid_12" id="content">
-      {% block content %}
-      <p>this is the content area</p>
-      {% endblock %}
+	<div class="grid_12" id="content">
+	  {% block content %}
+	  <p>this is the content area</p>
+	  {% endblock %}
+	</div>
       </div>
+    </div>
   </body>
 </html>

@@ -110,7 +110,6 @@ ul
 
 .calendar {
     margin: auto;
-    outline: 1px dashed white;
 }
 
 .calendar td div.day {
@@ -148,7 +147,6 @@ ul
 .navigation {
   margin: auto;
   width: 600px;
-  outline: 1px dashed red;
 }
 
 .navigation li {
@@ -156,7 +154,6 @@ ul
   width: 200px;
   padding: 0px;
   margin: 0px;
-  outline: 1px dashed blue;
 }
 
 .navigation li.select {

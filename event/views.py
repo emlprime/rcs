@@ -18,10 +18,12 @@ def month_calendar(request, year=None, month=None):
     calendar = Event.fill_events(weeks, date_str)
     previous_month_url = Event.previous_month_url(date_str)
     next_month_url = Event.next_month_url(date_str)
+    events = Event.get_events_from_calendar(calendar)
     current_month = date_str[:7]
 
     weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     context = {
+        "events": events, 
         "calendar": calendar, 
         "weekdays": weekdays,
         "previous_month_url": previous_month_url,

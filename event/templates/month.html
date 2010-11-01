@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 
+{% block qtipjs %}
+<script type="text/javascript">
+// Create the tooltips only on document load
+$(document).ready(function() 
+{
+   // By suppling no content attribute, the library uses each elements title attribute by default
+   $('#content a[href][title]').qtip({
+      content: {
+         text: false // Use each elements title attribute
+      },
+      style: 'dark' 
+   });
 
+});
+</script>
+{% endblock %}
 {% block content %}
 
 <ul class="navigation">
   <li class="previous">
     &nbsp;
     {% if previous_month_url %}
-    <a href="{{ previous_month_url }}">&lt; &lt; Previous</a>
+    <a href="{{ previous_month_url }}" title="Previous Month">&lt; &lt; Previous</a>
     {% endif %}
   </li>
   <li class="select">
@@ -15,7 +30,7 @@
   </li>
   <li class="next">
     {% if next_month_url %}
-    <a href="{{ next_month_url }}">Next &gt;&gt;</a>
+    <a href="{{ next_month_url }}" title="Next Month">Next &gt;&gt;</a>
     {% endif %}
     &nbsp;
   </li>
@@ -28,6 +43,7 @@
     {% endfor %}
   </tr>
 {% for week in calendar %}
+{% if week %}
 <tr>
   {% for day in week %}
   {% if day %}
@@ -50,6 +66,7 @@
   {% endif %}
   {% endfor %}
 </tr>
+{% endif %}
 {% endfor %}
 </table>
 

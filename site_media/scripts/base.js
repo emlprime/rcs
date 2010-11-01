@@ -1,7 +1,5 @@
-$(function(){
-    // fix for target="_blank"
-    $("a[@rel~='external']").click(function(){
-	window.open($(this).attr("href"));
-	return false;
-    });
+$(document).ready(function() {
+$("a[rel~='external']").click(
+    function(){this.target = "_BLANK";}
+);
 });
