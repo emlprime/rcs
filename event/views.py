@@ -10,10 +10,10 @@ from rcs.event.models import Event
 def month_calendar(request, year=None, month=None):
     if not year or not month:
         current_time = datetime.now()
-        date_str = current_time.strftime("%Y-%m-%d")
+        date_str = current_time.strftime("%Y-%m-01")
     else:
         date_str = "%s-%s-01" % (year, month)
-        
+    
     weeks = Event.get_weeks_for_month(date_str)
     calendar = Event.fill_events(weeks, date_str)
     previous_month_url = Event.previous_month_url(date_str)
