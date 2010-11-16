@@ -19,7 +19,8 @@ def month_calendar(request, year=None, month=None):
     previous_month_url = Event.previous_month_url(date_str)
     next_month_url = Event.next_month_url(date_str)
     events = Event.get_events_from_calendar(calendar)
-    current_month = date_str[:7]
+    current_month = datetime.strptime("2010-11-01", "%Y-%m-%d")
+    current_month_str = datetime.strftime(current_month, "%B %Y")
 
     weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     context = {
@@ -28,7 +29,7 @@ def month_calendar(request, year=None, month=None):
         "weekdays": weekdays,
         "previous_month_url": previous_month_url,
         "next_month_url": next_month_url,
-        "current_month": current_month
+        "current_month_str": current_month_str
         }
     response = render_to_response("month.html", RequestContext(request, context))
     return response
