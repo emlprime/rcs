@@ -19,7 +19,7 @@ def month_calendar(request, year=None, month=None):
     previous_month_url = Event.previous_month_url(date_str)
     next_month_url = Event.next_month_url(date_str)
     events = Event.get_events_from_calendar(calendar)
-    current_month = datetime.strptime("2010-11-01", "%Y-%m-%d")
+    current_month = datetime.strptime(date_str, "%Y-%m-%d")
     current_month_str = datetime.strftime(current_month, "%B %Y")
 
     weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
