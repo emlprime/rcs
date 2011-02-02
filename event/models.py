@@ -11,14 +11,15 @@ class Event(models.Model):
     summary = models.CharField(max_length=255)
     location = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    date_start = models.DateField()
-    date_end = models.DateField(null=True, blank=True)
+    date_start = models.DateTimeField()
     created = models.DateField(auto_now_add=True, null=True, blank=True)
     url = models.URLField(null=True, blank=True)
     
     @classmethod
     def get_events_for_day(cls, date=None):
-        events = cls.objects.filter(date_start=date)
+        today = datetime.strptime(date, DATE_FORMAT)
+        next_date = today + timedelta(days=1)
+        events = cls.objects.filter(date_start__gte=date, date_start__lt=next_date)
         return events
 
     @classmethod
@@ -113,7 +114,7 @@ class Event(models.Model):
 
 
     def display(self):
-        result = "<a href='%s' class='event_link' title=\"%s\">%s</a>" % (self.url, self.display_tooltip(), self.summary)
+        result = "<a href='%s' class='event_link' title=\"%s\">%s</a>" % (self.url, self.display_tooltip(), str(self))
         return result
 
     def display_tooltip(self):
@@ -123,5 +124,8 @@ class Event(models.Model):
         return self.summary
         
     def __str__(self):
-        return self.summary
+        summary = self.summary 
+        a = self.date_start
+        time = "%d:%d %s" % (a.hour, a.minute, a.strftime("%p"))
+        return "%s<br />%s<br />" % (summary, time)
         
