@@ -41,14 +41,48 @@ a:hover
 #masthead
 {
   text-align: center;
-  height: 280px;
-  margin-top: 2em;
+  height: 180px;
 }
 
-#navigation img
+#calendar_link
 {
-  width: 60px;
-  margin:0.7em;
+  text-align: center;
+}
+
+#calendar_link img
+{
+  width: 220px;
+  margin-top: -3em;
+}
+
+#guitar_link img
+{
+  height: 55px;
+}
+
+#social_links img
+{
+  height: 45px;
+}
+
+#navigation a
+{
+  font-size: 20px;
+  color: #33ff33;
+}
+
+#navigation span
+{
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #333333;
+}
+
+#navigation a:hover
+{
+  color: #ff0000;
 }
 
 h2

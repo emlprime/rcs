@@ -27,36 +27,46 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
     <div class="container_12">
 
       <div class="grid_12" id="masthead">
-	<a href="/"><img src="/site_media/images/TOPBANNER.jpg" alt="Rock City Studios" /></a>
+	<a href="/"><img src="/site_media/images/rcs_header.jpg" alt="Rock City Studios" /></a>
       </div>
 
       <div class="clear">&nbsp;</div>
 
-      <div class="grid_12">
-
-	<div id="navigation" class="grid_12">
-	  <span><a href="/"><img src="/site_media/images/HOME.jpg" alt="home" /></a></span>
-	  <span><a href="/contact/"><img src="/site_media/images/CONTACT.jpg" alt="Contact" /></a></span>
-	  <span><a href="/videos/"><img src="/site_media/images/VIDEOS.jpg" alt="Videos" /></a></span>
-	  <span><a href="/calendar/"><img src="/site_media/images/CALENDAR.jpg" alt="Calendar" /></a></span>
-	  <span><a href="/learn/"><img src="/site_media/images/LEARN.jpg" alt="Learn" /></a></span>
-	  <span><a href="/rehearse/"><img src="/site_media/images/REHEARSE.jpg" alt="Rehearse" /></a></span>
-	  <span><a href="/record/"><img src="/site_media/images/RECORD.jpg" alt="Record" /></a></span>
-	  <span><a href="/perform/"><img src="/site_media/images/PERFORM.jpg" alt="Perform" /></a></span>
-	  <span><a href="http://www.myspace.com/rockcitystudio" rel="external"><img src="/site_media/images/MYSPACE.jpg" alt="Myspace" /></a></span>
-	  <span><a href="http://www.facebook.com/pages/Camarillo-CA/Rock-City-Studios/104447707207" rel="external"><img src="/site_media/images/FACEBOOK.jpg" alt="Facebook" /></a></span>
-	  <span><a href="http://www.youtube.com/user/RockCityStudiosCA" rel="external"><img src="/site_media/images/YOUTUBE.jpg" alt="YouTube" /></a></span>
-
-	</div>
-
-	<div id="clear">&nbsp;</div>
-
-	<div class="grid_12" id="content">
-	  {% block content %}
-	  <p>This is the content area</p>
-	  {% endblock %}
-	</div>
+      <div id="navigation" class="grid_12">
+	<span class="nav_link"><a href="/">Home</a></span>
+	<span class="nav_link"><a href="/about/">About</a></span>
+	<span class="nav_link"><a href="/learn/">Learn</a></span>
+	<span class="nav_link"><a href="/rehearse/">Rehearse</a></span>
+	<span class="nav_link"><a href="/record/">Record</a></span>
+	<span class="nav_link"><a href="/perform/">Perform</a></span>
+	<span class="nav_link"><a href="/party/">Party</a></span>
       </div>
+
+      <div id="clear">&nbsp;</div>
+      
+      <div class="grid_3" id="sidebar">
+	<div id="social_links">
+	  <a href="http://www.facebook.com/pages/Camarillo-CA/Rock-City-Studios/104447707207" rel="external"><img src="/site_media/images/FACEBOOK.png" alt="Facebook" /></a>
+	  <a href="http://www.twitter.com/" rel="external"><img src="/site_media/images/TWITTER.jpg" alt="Twitter" /></a>
+	  <a href="http://www.youtube.com/user/RockCityStudiosCA" rel="external"><img src="/site_media/images/YOUTUBE.jpg" alt="YouTube" /></a>
+	  <a href="http://www.myspace.com/rockcitystudio" rel="external"><img src="/site_media/images/MYSPACE.jpg" alt="Myspace" /></a>
+	</div>
+
+
+	<div id="calendar_link"><a href="/calendar/"><h1>Calendar</h1><img alt="Calendar" src="/site_media/images/CALENDAR.png"</a></div>
+
+	<div id="guitar_link"><img alt="Rock City Guitar Repair" src="/site_media/images/rcs_guitarrepair.jpg" /></div>
+      
+	<iframe width="216" height="168" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+      </div>
+      
+      <div class="grid_9" id="content">
+	{% block content %}
+	<p>This is the content area</p>
+	{% endblock %}
+      </div>
+
     </div>
   </body>
 </html>
