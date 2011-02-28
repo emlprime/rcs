@@ -102,6 +102,7 @@ h3
 #content
 {
   text-align: center;
+  margin-top: 3em;
 }
 
 .subheader
@@ -196,4 +197,72 @@ ul
 
 .navigation li.next {
   text-align: right;
+}
+
+#dropdowns
+{
+  position: relative;
+  height: 35px;
+}
+
+.dropdown
+{
+  float:left;
+  margin-top: 0.5em;
+  margin-right: 4px;
+  width: 110px;
+  padding-top: 0.5em;
+  background-color: #333333;
+  font-size: 14px;
+  color: #33ff33;
+}
+
+#home_dropdown
+{
+  position: absolute;
+  width: 124px;
+  left: 0px;
+}
+
+#about_dropdown
+{
+  position: absolute;
+  left: 128px;
+  width: 123px;
+}
+
+#learn_dropdown
+{
+  width: 121px;
+  position: absolute;
+  left: 255px;
+}
+
+#rehearse_dropdown
+{
+  width: 154px;
+  position: absolute;
+  left: 380px;
+}
+
+#record_dropdown
+{
+  position: absolute;
+  width: 135px;
+  right: 263px;
+}
+
+#perform_dropdown
+{
+  position: absolute;
+  width: 141px;
+  right: 118px;
+}
+
+#party_dropdown
+{
+  position: absolute;
+  margin-right: 0px;
+  width: 117px;
+  right: 1px;
 }

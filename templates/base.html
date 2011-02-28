@@ -32,14 +32,85 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 
       <div class="clear">&nbsp;</div>
 
+      <script type="text/javascript" language="JavaScript">
+      <!-- Copyright 2006,2007 Bontrager Connection, LLC
+
+      function HideContent(d) {
+      if(d.length < 1) { return; }
+      console.log('mouseout');
+      document.getElementById(d).style.display = "none";
+      }
+
+      function ShowContent(d) {
+      if(d.length < 1) { return; }
+      console.log('mousein');
+      var dd = document.getElementById(d);
+      dd.style.display = "block";
+      }
+
+      function ReverseContentDisplay(d) {
+      if(d.length < 1) { return; }
+      var dd = document.getElementById(d);
+      if(dd.style.display == "none") { dd.style.display = "block"; }
+      else { dd.style.display = "none"; }
+      }
+      //-->
+      </script>
+
       <div id="navigation" class="grid_12">
 	<span class="nav_link"><a href="/">Home</a></span>
 	<span class="nav_link"><a href="/about/">About</a></span>
-	<span class="nav_link"><a href="/learn/">Learn</a></span>
-	<span class="nav_link"><a href="/rehearse/">Rehearse</a></span>
+	<span class="nav_link"><a onmouseover="ShowContent('learn_dropdown'); return true;" onmouseout="HideContent('learn_dropdown'); return true;" href="javascript:ReverseContentDisplay('learn_dropdown')">Learn</a></span>
+	<span class="nav_link"><a onmouseover="ShowContent('rehearse_dropdown'); return true;" onmouseout="HideContent('rehearse_dropdown'); return true;" href="javascript:ReverseContentDisplay('rehearse_dropdown')">Rehearse</a></span>
 	<span class="nav_link"><a href="/record/">Record</a></span>
 	<span class="nav_link"><a href="/perform/">Perform</a></span>
 	<span class="nav_link"><a href="/party/">Party</a></span>
+      </div>
+      <div class="clear">&nbsp;</div>
+      <div id="dropdowns" class="grid_12">
+	<div class="dropdown" id="home_dropdown" style="display:none">
+	  <ul>
+	    <li>Empty</li>
+	    <li>Empty</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="about_dropdown" style="display:none">
+	  <ul>
+	    <li>Empty</li>
+	    <li>Empty</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="learn_dropdown" style="display:none">
+	  <ul>
+	    <li>Individual</li>
+	    <li>Group</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="rehearse_dropdown" style="display:none">
+	  <ul>
+	    <li>About</li>
+	    <li>Backline</li>
+	    <li>Rates</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="record_dropdown" style="display:none">
+	  <ul>
+	    <li>Individual</li>
+	    <li>Group</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="perform_dropdown" style="display:none">
+	  <ul>
+	    <li>Individual</li>
+	    <li>Group</li>
+	  </ul>
+	</div>
+	<div class="dropdown" id="party_dropdown" style="display:none">
+	  <ul>
+	    <li>Individual</li>
+	    <li>Group</li>
+	  </ul>
+	</div>
       </div>
 
       <div id="clear">&nbsp;</div>
