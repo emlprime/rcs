@@ -38,10 +38,30 @@ a:hover
   margin-left: -100000px;
 }
 
+#top_right_links
+{
+  text-align: right;
+}
+
+#top_right_links a
+{
+  border: 1px solid #cccccc;
+  color: #cccccc;
+  font-size: 15px;
+  padding: 0.3em;
+  text-decoration: none;
+}
+
+#top_right_links a:hover
+{
+  color: white;
+}
+
 #masthead
 {
   text-align: center;
-  height: 180px;
+  margin-left: -30px;
+  height: 110px;
 }
 
 #calendar_link
@@ -58,23 +78,33 @@ a:hover
 #guitar_link img
 {
   height: 55px;
+  margin-bottom: 1.5em;
+  margin-top: -1.5em;
 }
 
 #social_links img
 {
   height: 45px;
+  margin-left: 1em;
+}
+
+#navigation
+{
+  width: 1024px;
+  left: -30px;
 }
 
 #navigation a
 {
   font-size: 20px;
   color: #33ff33;
+  text-decoration: none;
 }
 
 #navigation span
 {
-  padding-left: 2.5em;
-  padding-right: 2.5em;
+  padding-left: 2.8em;
+  padding-right: 2.9em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   background-color: #333333;
@@ -217,6 +247,17 @@ ul
   color: #33ff33;
 }
 
+.dropdown a
+{
+  color: #33ff33;
+  text-decoration:none;
+}
+
+.dropdown a:hover
+{
+  color: #ff0000;
+}
+
 #home_dropdown
 {
   position: absolute;
@@ -233,14 +274,14 @@ ul
 
 #learn_dropdown
 {
-  width: 121px;
+  width: 131px;
   position: absolute;
-  left: 255px;
+  left: 244px;
 }
 
 #rehearse_dropdown
 {
-  width: 154px;
+  width: 163px;
   position: absolute;
   left: 380px;
 }
@@ -248,15 +289,15 @@ ul
 #record_dropdown
 {
   position: absolute;
-  width: 135px;
-  right: 263px;
+  width: 143px;
+  right: 245px;
 }
 
 #perform_dropdown
 {
   position: absolute;
-  width: 141px;
-  right: 118px;
+  width: 151px;
+  right: 90px;
 }
 
 #party_dropdown
@@ -265,4 +306,22 @@ ul
   margin-right: 0px;
   width: 117px;
   right: 1px;
+}
+
+#secondary_dropdowns
+{
+  position: float;
+}
+
+.secondary_dropdown
+{
+  outline: 1px solid red;
+  float:right;
+  margin-top: 0.5em;
+  margin-right: 4px;
+  width: 150px;
+  padding-top: 0.5em;
+  background-color: #333333;
+  font-size: 14px;
+  color: #33ff33;
 }

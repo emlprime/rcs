@@ -26,6 +26,9 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 
     <div class="container_12">
 
+      <div class="grid_3 prefix_9" id="top_right_links">
+	<p><a href="/contact/">Contact</a><a href="/community/">Community</a></p>
+      </div>
       <div class="grid_12" id="masthead">
 	<a href="/"><img src="/site_media/images/rcs_header.jpg" alt="Rock City Studios" /></a>
       </div>
@@ -62,8 +65,8 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 	<span class="nav_link"><a href="/about/">About</a></span>
 	<span class="nav_link"><a onmouseover="ShowContent('learn_dropdown'); return true;" onmouseout="HideContent('learn_dropdown'); return true;" href="javascript:ReverseContentDisplay('learn_dropdown')">Learn</a></span>
 	<span class="nav_link"><a onmouseover="ShowContent('rehearse_dropdown'); return true;" onmouseout="HideContent('rehearse_dropdown'); return true;" href="javascript:ReverseContentDisplay('rehearse_dropdown')">Rehearse</a></span>
-	<span class="nav_link"><a href="/record/">Record</a></span>
-	<span class="nav_link"><a href="/perform/">Perform</a></span>
+	<span class="nav_link"><a onmouseover="ShowContent('rehearse_dropdown'); return true;" onmouseout="HideContent('record_dropdown'); return true;" href="javascript:ReverseContentDisplay('record_dropdown')">Record</a></span>
+	<span class="nav_link"><a onmouseover="ShowContent('rehearse_dropdown'); return true;" onmouseout="HideContent('perform_dropdown'); return true;" href="javascript:ReverseContentDisplay('perform_dropdown')">Perform</a></span>
 	<span class="nav_link"><a href="/party/">Party</a></span>
       </div>
       <div class="clear">&nbsp;</div>
@@ -82,8 +85,8 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 	</div>
 	<div class="dropdown" id="learn_dropdown" style="display:none">
 	  <ul>
-	    <li>Individual</li>
-	    <li>Group</li>
+	    <li><a onmouseover="ShowContent('individual_dropdown'); return true;" onmouseout="HideContent('individual_dropdown'); return true;" href="javascript:ReverseContentDisplay('individual_dropdown')">Individual</a></li>
+	    <li><a onmouseover="ShowContent('group_dropdown'); return true;" onmouseout="HideContent('group_dropdown'); return true;" href="javascript:ReverseContentDisplay('group_dropdown')">Group</a></li>
 	  </ul>
 	</div>
 	<div class="dropdown" id="rehearse_dropdown" style="display:none">
@@ -95,14 +98,16 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 	</div>
 	<div class="dropdown" id="record_dropdown" style="display:none">
 	  <ul>
-	    <li>Individual</li>
-	    <li>Group</li>
+	    <li>About</li>
+	    <li>Equipment</li>
+	    <li>Rates</li>
 	  </ul>
 	</div>
 	<div class="dropdown" id="perform_dropdown" style="display:none">
 	  <ul>
-	    <li>Individual</li>
-	    <li>Group</li>
+	    <li>About</li>
+	    <li>Backline</li>
+	    <li>Booking</li>
 	  </ul>
 	</div>
 	<div class="dropdown" id="party_dropdown" style="display:none">
@@ -113,11 +118,37 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 	</div>
       </div>
 
+      <div id="secondary_dropdowns">
+	<div class="secondary_dropdown" id="individual_dropdown" style="display:none">
+	  <ul>
+	    <li>About</li>
+	    <li>Voice</li>
+	    <li>Guitar</li>
+	    <li>Bass</li>
+	    <li>Piano</li>
+	    <li>Drums</li>
+	    <li>Woodwinds</li>
+	    <li>Mandolin/Banjo</li>
+	  </ul>
+	</div>
+	<div class="secondary_dropdown" id="group_dropdown" style="display:none">
+	  <ul>
+	    <li>About</li>
+	    <li>Musical Theatre</li>
+	    <li>Piano/Voice</li>
+	    <li>Rockband</li>
+	    <li>Group Guitar</li>
+	    <li>Songwriting</li>
+	  </ul>
+	</div>
+
+      </div>
+
       <div id="clear">&nbsp;</div>
       
       <div class="grid_3" id="sidebar">
 	<div id="social_links">
-	  <a href="http://www.facebook.com/pages/Camarillo-CA/Rock-City-Studios/104447707207" rel="external"><img src="/site_media/images/FACEBOOK.png" alt="Facebook" /></a>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FRock-City-Studios%2F104447707207&amp;layout=standard&amp;show_faces=false&amp;width=225&amp;action=like&amp;font=arial&amp;colorscheme=dark&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:225px; height:35px;" allowTransparency="true"></iframe>
 	  <a href="http://www.twitter.com/" rel="external"><img src="/site_media/images/TWITTER.jpg" alt="Twitter" /></a>
 	  <a href="http://www.youtube.com/user/RockCityStudiosCA" rel="external"><img src="/site_media/images/YOUTUBE.jpg" alt="YouTube" /></a>
 	  <a href="http://www.myspace.com/rockcitystudio" rel="external"><img src="/site_media/images/MYSPACE.jpg" alt="Myspace" /></a>
@@ -128,7 +159,7 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 
 	<div id="guitar_link"><img alt="Rock City Guitar Repair" src="/site_media/images/rcs_guitarrepair.jpg" /></div>
       
-	<iframe width="216" height="168" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	<iframe width="216" height="168" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a rel="external" href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Rock+City,+Camarillo,+CA&amp;sll=34.222164,-119.035406&amp;sspn=0.028317,0.07184&amp;ie=UTF8&amp;hq=Rock+City&amp;hnear=Rock+City,+2258+Pickwick+Dr,+Camarillo,+California+93010-6410&amp;ll=34.230326,-119.034204&amp;spn=0.024837,0.036478&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 
       </div>
       
