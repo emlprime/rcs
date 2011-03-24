@@ -2,36 +2,22 @@
 
 {% block content %}
 
-<div class="grid_3 alpha">
+<div class="grid_9">
   <img class="site_image" src="/site_media/images/learn_1_sm.jpg" alt=" " />
   <img class="site_image" src="/site_media/images/learn_5_sm.jpg" alt=" " />
-  <img class="site_image" src="/site_media/images/learn_8_sm.jpg" alt=" " />
+  <img class="site_image" src="/site_media/images/learn_2_sm.jpg" alt=" " />
 </div>
 
-<div class="grid_6" id="learn_page">
+<div class="grid_9" id="learn_page">
   <h2>{{ learn_text.top_text|escape|linebreaks }}</h2>
-
-  <ul>
-    {% for object in instruments %}
-
-    <div class="instrument">
-    <li class="subheader">{{ object.name }}</li>
-    {% for i in object.InstructorList %}
-    <li>{{ i.name }}</li>
-    {% endfor %}
-    </div>
-
-    {% endfor %}
-  </ul>
-<div class="clear">&nbsp;</div>
 
   <p>{{ learn_text.bottom_text|escape|linebreaks }}</p>
 </div>
 
-<div class="grid_3 omega">
-<img class="site_image" src="/site_media/images/learn_3_sm.jpg" alt=" " />
-<img class="site_image" src="/site_media/images/learn_2_sm.jpg" alt=" " />
-<img class="site_image" src="/site_media/images/learn_7_sm.jpg" alt=" " />
+<div class="grid_9">
+  <img class="site_image" src="/site_media/images/learn_8_sm.jpg" alt=" " />
+  <img class="site_image" src="/site_media/images/learn_3_sm.jpg" alt=" " />
+  <img class="site_image" src="/site_media/images/learn_7_sm.jpg" alt=" " />
 </div>
 
 {% endblock %}

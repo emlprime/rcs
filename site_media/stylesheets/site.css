@@ -310,18 +310,28 @@ ul
 
 #secondary_dropdowns
 {
-  position: float;
+  position: relative;
 }
 
 .secondary_dropdown
 {
-  outline: 1px solid red;
-  float:right;
+  position: absolute;
+  left: 390px;
   margin-top: 0.5em;
   margin-right: 4px;
   width: 150px;
   padding-top: 0.5em;
   background-color: #333333;
   font-size: 14px;
+}
+
+.secondary_dropdown a
+{
   color: #33ff33;
+  text-decoration: none;
+}
+
+.secondary_dropdown a:hover
+{
+  color: #ff0000;
 }

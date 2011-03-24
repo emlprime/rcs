@@ -118,17 +118,17 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 	</div>
       </div>
 
-      <div id="secondary_dropdowns">
+      <div id="secondary_dropdowns" style="z-index:2;">
 	<div class="secondary_dropdown" id="individual_dropdown" style="display:none">
 	  <ul>
-	    <li>About</li>
-	    <li>Voice</li>
-	    <li>Guitar</li>
-	    <li>Bass</li>
-	    <li>Piano</li>
-	    <li>Drums</li>
-	    <li>Woodwinds</li>
-	    <li>Mandolin/Banjo</li>
+	    <a href="/learn/individual/about/"><li>About</li></a>
+	    <a href="/learn/individual/voice/"><li>Voice</li></a>
+	    <a href="/learn/individual/guitar/"><li>Guitar</li></a>
+	    <a href="/learn/individual/bass/"><li>Bass</li></a>
+	    <a href="/learn/individual/piano/"><li>Piano</li></a>
+	    <a href="/learn/individual/drums/"><li>Drums</li></a>
+	    <a href="/learn/individual/woodwinds/"><li>Woodwinds</li></a>
+	    <a href="/learn/individual/mandolin/"><li>Mandolin/Banjo</li></a>
 	  </ul>
 	</div>
 	<div class="secondary_dropdown" id="group_dropdown" style="display:none">
@@ -163,7 +163,7 @@ a {cursor: url(http://www.zingerbugimages.com/cursors/3d_note_silver.ani);}</sty
 
       </div>
       
-      <div class="grid_9" id="content">
+      <div class="grid_9" id="content" style="z-index:1;">
 	{% block content %}
 	<p>This is the content area</p>
 	{% endblock %}

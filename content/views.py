@@ -5,7 +5,7 @@ from django_calendar import DynamicCalendar
 
 from datetime import date
 
-from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor, Instrument,  RehearseText, RecordText, RecordEquipment, RecordEquipmentType
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor,  RehearseText, RecordText, RecordEquipment, RecordEquipmentType
 
 def home(request):
     """Submits the home page information to the URL
@@ -53,7 +53,62 @@ def learn(request):
     """
     template = "learn.html"
     learn_text = LearnText.objects.latest()
-    instruments = Instrument.objects.all()
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def voice(request):
+    """Submits the voice instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="V")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def guitar(request):
+    """Submits the guitar instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="G")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def bass(request):
+    """Submits the bass instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="B")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def piano(request):
+    """Submits the piano instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="P")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def drums(request):
+    """Submits the drums instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="D")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def woodwinds(request):
+    """Submits the woodwinds instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="W")
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def mandolin(request):
+    """Submits the mandolin instructors to the URL
+    """
+    template="instructors.html"
+    instructors = Instructor.objects.filter(instrument="M")
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 

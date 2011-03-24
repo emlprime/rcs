@@ -44,7 +44,7 @@
         "pk": 1, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 1, 
+
             "name": "Charlie Lin"
         }
     }, 
@@ -52,7 +52,7 @@
         "pk": 2, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 1, 
+
             "name": "Stephen Armstrong"
         }
     }, 
@@ -60,7 +60,7 @@
         "pk": 3, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 1, 
+
             "name": "Oscar Rivera"
         }
     }, 
@@ -68,7 +68,7 @@
         "pk": 4, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 1, 
+
             "name": "Carol Jones"
         }
     }, 
@@ -76,7 +76,7 @@
         "pk": 5, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 6, 
+
             "name": "Carol Jones"
         }
     }, 
@@ -84,7 +84,7 @@
         "pk": 6, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 7, 
+
             "name": "Carol Jones"
         }
     }, 
@@ -92,7 +92,7 @@
         "pk": 7, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 8, 
+
             "name": "Cavit Celayir-Monezis"
         }
     }, 
@@ -100,7 +100,7 @@
         "pk": 10, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 3, 
+
             "name": "Becca Cornelius"
         }
     }, 
@@ -108,7 +108,7 @@
         "pk": 11, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 3, 
+
             "name": "Julianne Cornelius"
         }
     }, 
@@ -116,7 +116,7 @@
         "pk": 12, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 3, 
+
             "name": "Scott Thomas"
         }
     }, 
@@ -124,7 +124,7 @@
         "pk": 13, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 4, 
+
             "name": "Justin Dempsey"
         }
     }, 
@@ -132,7 +132,7 @@
         "pk": 14, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 4, 
+
             "name": "Christopher Schnack"
         }
     }, 
@@ -140,7 +140,7 @@
         "pk": 15, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 5, 
+
             "name": "Heidi"
         }
     }, 
@@ -148,7 +148,7 @@
         "pk": 16, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 5, 
+
             "name": "David Applebaum"
         }
     }, 
@@ -156,7 +156,7 @@
         "pk": 17, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 9, 
+
             "name": "Doug Peyton"
         }
     }, 
@@ -164,72 +164,8 @@
         "pk": 18, 
         "model": "content.instructor", 
         "fields": {
-            "instrument": 9, 
+
             "name": "Trevor"
-        }
-    }, 
-    {
-        "pk": 1, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Guitar", 
-            "order": 1
-        }
-    }, 
-    {
-        "pk": 7, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Banjo", 
-            "order": 2
-        }
-    }, 
-    {
-        "pk": 9, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Bass", 
-            "order": 3
-        }
-    }, 
-    {
-        "pk": 6, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Mandolin", 
-            "order": 4
-        }
-    }, 
-    {
-        "pk": 3, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Voice", 
-            "order": 5
-        }
-    }, 
-    {
-        "pk": 4, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Drums", 
-            "order": 6
-        }
-    }, 
-    {
-        "pk": 5, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Piano", 
-            "order": 7
-        }
-    }, 
-    {
-        "pk": 8, 
-        "model": "content.instrument", 
-        "fields": {
-            "name": "Flute", 
-            "order": 8
         }
     }, 
     {

@@ -70,22 +70,19 @@ class LearnText(models.Model):
         return str(self.date)
 
 class Instructor(models.Model):
-    instrument = models.ForeignKey('Instrument')
+    INSTRUMENT_CHOICES = (
+        (u'V', u'Voice'),
+        (u'G', u'Guitar'),
+        (u'P', u'Piano'),
+        (u'D', u'Drums'),
+        (u'W', u'Woodwinds'),
+        (u'M', u'Mandolin and Banjo')
+        )
+
     name = models.CharField(max_length=255)
-
-    def __unicode__(self):
-        return self.name
-
-class Instrument(models.Model):
-    name = models.CharField(max_length=255)
-    order = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        ordering = ['order']
-
-    def InstructorList(self):
-        instructor_list=Instructor.objects.filter(instrument=self)
-        return instructor_list
+    instrument = models.CharField(max_length=2, choices=INSTRUMENT_CHOICES)
+    bio = models.TextField()
+    picture = models.ImageField(upload_to="images", blank=True, null=True)
 
 
     def __unicode__(self):

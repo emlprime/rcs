@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+{% for i in instructors %}
+<li>
+{% if i.picture %}
+<img src="{{ i.picture }}" alt="{{ i.name }}" />
+{% endif %}
+<h2>{{ i.name }}</h2>
+<p>{{ i.bio }}</p>
+</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
