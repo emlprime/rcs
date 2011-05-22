@@ -76,6 +76,7 @@ class Instructor(models.Model):
         (u'P', u'Piano'),
         (u'D', u'Drums'),
         (u'W', u'Woodwinds'),
+        (u'W', u'Bass'),
         (u'M', u'Mandolin and Banjo')
         )
 
