@@ -335,3 +335,14 @@ ul
 {
   color: #ff0000;
 }
+
+.instructor img
+{
+  margin-top: 4em;
+}
+
+.instructor h2
+{
+  font-size: 18px;
+  font-weight: bold;
+}
