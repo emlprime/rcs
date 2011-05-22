@@ -5,11 +5,15 @@
 <ul>
 {% for i in instructors %}
 <li class="instructor">
+<div class="grid_3 alpha">
 {% if i.picture %}
 <img src="{{ i.picture }}" alt="{{ i.name }}" />
 {% endif %}
+</div>
+<div class="grid_6 omega">
 <h2>{{ i.name }}</h2>
 <p>{{ i.bio }}</p>
+</div>
 </li>
 {% endfor %}
 </ul>
