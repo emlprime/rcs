@@ -33,4 +33,5 @@ urlpatterns += patterns('rcs.content.views',
      (r'^perform/$', "perform"),
      (r'^contact/$', "contact"),
      (r'^videos/$', "videos"),
+     (r'^party/$', "party"),
 )

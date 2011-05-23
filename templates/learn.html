@@ -9,9 +9,9 @@
 </div>
 
 <div class="grid_9" id="learn_page">
-  <h2>{{ learn_text.top_text|escape|linebreaks }}</h2>
+  <h2>{{ learn_text.top_text|escape|safe }}</h2>
 
-  <p>{{ learn_text.bottom_text|escape|linebreaks }}</p>
+  <p>{{ learn_text.bottom_text|escape|safe }}</p>
 </div>
 
 <div class="grid_9">
