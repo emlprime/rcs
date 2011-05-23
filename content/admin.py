@@ -1,10 +1,14 @@
 from django.contrib import admin
 
-from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, Instructor, LearnText, RehearseText, RecordText, RecordEquipment, RecordEquipmentType
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, Instructor, LearnText, RehearseText, RecordText, RecordEquipment, RecordEquipmentType, PartyText
 
 class HomeTextAdmin(admin.ModelAdmin):
     pass
 admin.site.register(HomeText, HomeTextAdmin)
+
+class PartyTextAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(PartyText, PartyTextAdmin)
 
 class ContactTextAdmin(admin.ModelAdmin):
     pass

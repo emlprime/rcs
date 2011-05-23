@@ -13,6 +13,20 @@ class HomeText(models.Model):
     def __unicode__(self):
         return str(self.date)
 
+class PartyText(models.Model):
+    """ the logic for the admin-editable party page text
+    """
+    date = models.DateField()
+    text = models.TextField()
+
+    class Meta:
+        ordering = ['-date']
+        get_latest_by = "date"
+
+    def __unicode__(self):
+        return str(self.date)
+
+
 class ContactText(models.Model):
     """ the logic for the admin-editable contact page text
     """

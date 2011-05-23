@@ -5,13 +5,21 @@ from django_calendar import DynamicCalendar
 
 from datetime import date
 
-from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor,  RehearseText, RecordText, RecordEquipment, RecordEquipmentType
+from rcs.content.models import HomeText, PerformText, ContactText, VideoText, Video, LearnText, Instructor,  RehearseText, RecordText, RecordEquipment, RecordEquipmentType, PartyText
 
 def home(request):
     """Submits the home page information to the URL
     """
     template = "index.html"
     home_text = HomeText.objects.latest()
+    context=locals()
+    return render_to_response(template, context, context_instance=RequestContext(request))
+
+def party(request):
+    """Submits the party page information to the URL
+    """
+    template = "party.html"
+    party_text = PartyText.objects.latest()
     context=locals()
     return render_to_response(template, context, context_instance=RequestContext(request))
 
